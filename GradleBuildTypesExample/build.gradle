@@ -1,0 +1,37 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.5.+'
+    }
+}
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion "18.0.1"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 18
+    }
+
+    productFlavors {
+        production {
+            packageName "be.tamere.gradlebuildtypesexample"
+        }
+
+        staging {
+            packageName "be.tamere.gradlebuildtypesexample.staging"
+        }
+    }
+}
+
+dependencies {
+	compile 'com.android.support:appcompat-v7:18.0.0'
+}
