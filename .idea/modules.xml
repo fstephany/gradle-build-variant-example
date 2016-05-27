@@ -3,8 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GradleBuildTypesExample/GradleBuildTypesExample.iml" filepath="$PROJECT_DIR$/GradleBuildTypesExample/GradleBuildTypesExample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/GradleBuildTypesExampleProject.iml" filepath="$PROJECT_DIR$/GradleBuildTypesExampleProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradle-build-variant-example.iml" filepath="$PROJECT_DIR$/gradle-build-variant-example.iml" />
     </modules>
   </component>
 </project>
-

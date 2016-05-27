@@ -1,37 +1,52 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:0.5.+'
-    }
-}
-apply plugin: 'android'
-
-repositories {
-    mavenCentral()
-}
+apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 18
-    buildToolsVersion "18.0.1"
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
+        applicationId "com.example.jant"
         minSdkVersion 15
-        targetSdkVersion 18
+        targetSdkVersion 22
     }
 
-    productFlavors {
-        production {
-            packageName "be.tamere.gradlebuildtypesexample"
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources true
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources true
         }
 
+    }
+
+
+    sourceSets {
+        stagingManifest {
+//            manifest.srcFile 'src/stagingManifest/AndroidManifest1.xml'
+            manifest.srcFile 'src/main/AndroidManifest1.xml'
+//            manifest.srcFile 'AndroidManifest1.xml'
+        }
+    }
+    productFlavors {
+//        useOldManifestMerger false
         staging {
-            packageName "be.tamere.gradlebuildtypesexample.staging"
+            applicationIdSuffix ".staging"
+//            packageName "be.tamere.gradlebuildtypesexample.staging"
+        }
+
+        production {
+//            packageName "be.tamere.gradlebuildtypesexample"
+        }
+
+        stagingManifest {
+            applicationIdSuffix ".stagingManifest"
         }
     }
 }
 
 dependencies {
-	compile 'com.android.support:appcompat-v7:18.0.0'
+    compile 'com.android.support:appcompat-v7:22.0.0'
 }
