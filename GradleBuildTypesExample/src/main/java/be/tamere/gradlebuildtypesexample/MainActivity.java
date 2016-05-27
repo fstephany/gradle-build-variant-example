@@ -13,7 +13,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         TextView serverUrlTextView = (TextView)findViewById(R.id.server_url_text_view);
-        serverUrlTextView.setText(Constants.BASE_URL);
+//        serverUrlTextView.setText(Constants.BASE_URL);
     }
 
 
